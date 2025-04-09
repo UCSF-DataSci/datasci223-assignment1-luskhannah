@@ -49,11 +49,10 @@ This assignment will help you practice:
 - Clone the repository to your local machine to begin working on the assignment
 
 ### Part 1: Update this README.md
-Replace the "Part 1" section with:
-- A brief introduction about yourself (first name only)
-- What you're hoping to get out of this course
-- Topics you would like to see included
-- A musical recommendation and a link to something about it (song, album, artist)
+- My name is Hannah
+- I am hoping to gain a begginer level understanding of python so I can work toward using it for data analysis in my research
+- I would love it if data cleaning and data visualization were covered in the course
+- [I love this music video by Glass Animals](https://www.youtube.com/watch?v=HQYC2EfzZZw)
 
 ### Part 2: Complete the email_hasher.py Script
 The email_hasher.py script should:
@@ -93,11 +92,22 @@ def hash_email(email):
         str: The SHA-256 hash of the email in hexadecimal format
     """
     # Your implementation here
-    pass
+    email_bytes = email.encode
+    return hashlib.sha256(email_bytes).hexdigest()
 
 def main():
     # Your implementation here
-    pass
+    if len(sys.argv) != 2:
+        print("Usage: python email_hasher.py <email>")
+        sys.exit(1)
+
+    email = sys.argv[1]
+    email_hash = hash_email(email)
+
+    print(email_hash)
+
+    with open("hash.email", "w") as f:
+        f.write(email_hash + '\n')
 
 if __name__ == "__main__":
     main()
