@@ -92,16 +92,11 @@ def hash_email(email):
         str: The SHA-256 hash of the email in hexadecimal format
     """
     # Your implementation here
-    email = email.strip()
-    return hashlib.sha256(email.encode()).hexdigest()
+    pass
 
 def main():
     # Your implementation here
-    email = sys.argv[1]
-    email_hash = hash_email(email)
-    print(email_hash)
-    with open("hash.email", "w") as f:
-        f.write(email_hash)
+    pass
 
 if __name__ == "__main__":
     main()
