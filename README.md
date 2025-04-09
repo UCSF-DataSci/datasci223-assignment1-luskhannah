@@ -92,6 +92,7 @@ def hash_email(email):
         str: The SHA-256 hash of the email in hexadecimal format
     """
     # Your implementation here
+    email = email.strip()
     return hashlib.sha256(email.encode()).hexdigest()
 
 def main():
