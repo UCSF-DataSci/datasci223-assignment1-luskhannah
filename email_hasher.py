@@ -62,7 +62,7 @@ def main():
         sys.exit(1)
     email = sys.argv[1]
     hash_value = hash_email(email)
-    write_hash_to_file(hash_email)
+    write_hash_to_file(hash_value)
 
 if __name__ == "__main__":
     main()
