@@ -92,8 +92,7 @@ def hash_email(email):
         str: The SHA-256 hash of the email in hexadecimal format
     """
     # Your implementation here
-    email_bytes = email.encode()
-    return hashlib.sha256(email_bytes).hexdigest()
+    return hashlib.sha256(email.encode()).hexdigest()
 
 def main():
     # Your implementation here
