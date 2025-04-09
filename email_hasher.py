@@ -29,6 +29,7 @@ def hash_email(email):
     # 1. Convert the email string to bytes
     # 2. Create a SHA-256 hash of the email
     # 3. Return the hash in hexadecimal format
+    email = email.strip().lower()
     email_bytes = email.encode()
     sha256_hash = hashlib.sha256(email_bytes).hexdigest()
     return sha256_hash   
